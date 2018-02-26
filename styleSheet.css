@@ -5,6 +5,7 @@
 	background: black;
 	font-family: 'Popins', sans-serif;
 	color: white;
+	opacity: .75;
 }
 #body{
 	width:100%;
