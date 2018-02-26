@@ -7,7 +7,15 @@
 	/*font-family: 'Indie Flower', cursive;*/
 	font-family: 'Berkshire Swash', cursive;
 	color: white;
+<<<<<<< HEAD
 	text-align:center;
+=======
+<<<<<<< HEAD
+	opacity: .75;
+=======
+	text-align: center;
+>>>>>>> bf3c6ebddbb725fde556f29fe9f0aefe25ecb5b9
+>>>>>>> 2d05db519eeac2e93cd5add46484ecc458b35a87
 }
 #body{
 	width:100%;
