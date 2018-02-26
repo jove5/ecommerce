@@ -3,8 +3,11 @@
 	height: 150px;
 	/*border: 2px solid red;*/
 	background: black;
-	font-family: 'Popins', sans-serif;
+	/*font-family: 'Popins', sans-serif;*/
+	/*font-family: 'Indie Flower', cursive;*/
+	font-family: 'Berkshire Swash', cursive;
 	color: white;
+	text-align: center;
 }
 #body{
 	width:100%;
