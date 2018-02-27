@@ -30,6 +30,7 @@
 .itemBlockHeder{ /* new devision inside the item block that present the header of the devision */
 	height:100px;
 	margin-top:-20px;
+	font-family: 'Playfair Display', serif;
 	text-align:center;
 	/*background: gray;*/
 	opacity: 0.5;
@@ -37,6 +38,7 @@
 .itemBlockBody img{ /* styling the images inside of the item block */
 	width: 350px;
 	height:300px;
+	font-family: 'Playfair Display', serif;
 }					/* closing images styling */
 .itemBlockFooter p{ /* style for the paragraph of the footer devision that is part of the item block */
 	text-align: center; /* givin center align to the paragraph */
