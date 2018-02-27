@@ -7,23 +7,16 @@
 	/*font-family: 'Indie Flower', cursive;*/
 	font-family: 'Berkshire Swash', cursive;
 	color: white;
-<<<<<<< HEAD
-
-	text-align:center;
-
-	opacity: .75;
-
-=======
 	text-align:center;
 	opacity: .75;
->>>>>>> 4c9ff56bbc2f85821bf16c7298e928ea33626ede
 }
+
 #body{
 	width:100%;
 	height:600px;
 	border: 2px solid blue;
 }
-.itemBlock{    <!-- this is the item block -->
+.itemBlock{    /*<!-- this is the item block -->*/
 	width:400px;
 	height:500px;
 	border: 1px solid gray;
@@ -55,9 +48,9 @@
 	border: 2px solid green;
 
 }
-button{
+button{ /* This is the sign in button, will turn this into class */ 
 	float: right;
-	width: 200px;
-	height: 100px;
+	width: 100px;
+	height: 40px;
 	background-color:white;
 }
