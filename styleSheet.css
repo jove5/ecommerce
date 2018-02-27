@@ -27,7 +27,7 @@
 	overflow-x: hidden;
 	padding-top: 60px;
 	transition: 0.5s; /*this element did not seem to work since it was not highlighted blue */
-
+	
 
 }
 .sidenav a{ /*this is the interaction between the side nav and navigation on the website*/
@@ -68,7 +68,7 @@
 	text-decoration: none; /* style for the links in the item block */
 }
 .itemBlockHeder{ /* new devision inside the item block that present the header of the devision */
-	height:100px;
+	height:50px;
 	margin-top:-20px;
 	font-family: 'Playfair Display', serif;
 	text-align:center;
@@ -76,8 +76,8 @@
 	opacity: 0.5;
 }						/* closing the header division of the item block devision */
 .itemBlockBody img{ /* styling the images inside of the item block */
-	width: 350px;
-	height:300px;
+	width: 400px;
+	height: 350px;
 	font-family: 'Playfair Display', serif;
 }					/* closing images styling */
 .itemBlockFooter p{ /* style for the paragraph of the footer devision that is part of the item block */
