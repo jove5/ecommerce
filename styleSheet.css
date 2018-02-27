@@ -18,7 +18,8 @@
 .itemBlock{    <!-- this is the item block -->
 	width:400px;
 	height:500px;
-	border: 1px solid red;
+	border: 1px solid gray;
+	background-color: #f0efef;
 	margin: 30px;
 	float: left;
 }					/* closing the item block */
@@ -29,7 +30,8 @@
 	height:100px;
 	margin-top:-20px;
 	text-align:center;
-	background: gray;
+	/*background: gray;*/
+	opacity: 0.5;
 }						/* closing the header division of the item block devision */
 .itemBlockBody img{ /* styling the images inside of the item block */
 	width: 350px;
@@ -37,6 +39,7 @@
 }					/* closing images styling */
 .itemBlockFooter p{ /* style for the paragraph of the footer devision that is part of the item block */
 	text-align: center; /* givin center align to the paragraph */
+	color:black;
 }						/* closing paragraph style */
 #footer{ 		/*starting style for the footer of the page*/
 	width:100%;
