@@ -16,21 +16,21 @@
 	height:600px;
 	border: 2px solid blue;
 }
-.sidenav{
+.sidenav{ /*this is the side navigation bar itself */
 	height:100%;
 	width: 0;
 	position: fixed;
-	z-index:1;
-	top: 0;
+	z-index:1; /*the zindex allows us to keep the side nav in front of the screen*/ 
+	top: 0; /*utilized for the position of the start point of drawing*/
 	left: 0;
 	background-color: #111;
 	overflow-x: hidden;
 	padding-top: 60px;
-	transition: 0.5s;
+	transition: 0.5s; /*this element did not seem to work since it was not highlighted blue */
 
 
 }
-.sidenav a{
+.sidenav a{ /*this is the interaction between the side nav and navigation on the website*/
 	padding: 8px 8px 8px 32px;
 	text-decoration: none;
 	font-size: 25px;
@@ -38,17 +38,17 @@
 	display: block;
 	transition: 0.3s;
 }
-.sidenav a:hover{
+.sidenav a:hover{ /*this is the ability to hover over the side nav*/
 	color: #f1f1f1;
 }
-.sidenav .closebtn {
+.sidenav .closebtn { /*this is used to close the side nav "x-button"*/
 	position: absolute;
 	top: 0;
 	right: 25px;
 	font-size: 36px;
 	margin-left: 50px;
 }
-#main {
+#main { /*this was in order to maintain the positioning of the overall nav bar */
 	transition: margin-left .5s;
 	padding: 20px;
 }
