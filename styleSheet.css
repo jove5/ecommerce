@@ -1,7 +1,7 @@
-@media (max-width: 1400px) {
+@media(max-width: 3400px) {
 
 #header{
-	max-width: 1300px
+	max-width: 3300px;
 	height: 150px;
 	/*border: 2px solid red;*/
 	background: black;
@@ -11,17 +11,18 @@
 	color: white;
 	text-align:center;
 	opacity: .75;
-	margin: -21px -10px 0px -10px;
+	margin: -21px -20px 0px -10px;
 }
 body {
 	background-color:red;
+
 }
 
 #body{
-	max-width:1700px;
+	max-width:3700px;
 	height:600px;
 	/*border: 2px solid blue;*/
-	margin: -22px -6px 0px -10px;
+	margin: -22px -20px 0px -10px;
 	background-color:white;
 }
 .sidenav{ /*this is the side navigation bar itself */
@@ -104,14 +105,14 @@ body {
 	color:black;
 }						/* closing paragraph style */
 footer{ 		/*starting style for the footer of the page*/
-	width:100%;
+	max-width:3300px;
 	height:150px;
 	background-color: black;
 	color: white;
 	font-family: 'Playfair Display', serif;
 	/*margin: -23px 6px 0px -10px;*/
-	/*padding: 20px 0px 0px 25px;
-	margin-left:-22px;*/
+	padding: 20px 0px 0px 25px;
+	margin:0px -20px 100px -10px;
 	
 
 }

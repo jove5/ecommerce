@@ -1,0 +1,40 @@
+.sideBar{
+	width:250px;
+	/*height:600px;*/
+	border: 1px solid gray;
+	/*font-family: 'Source Sans Pro', sans-serif;*/
+		color:#9D9897;
+	padding:0px 0px 10px 10px;
+	margin:10px o 10px 0;
+
+}
+.sideBar h1{
+
+	font-size:x-large;
+}
+.sideBar h2{
+	font-size: 18px;
+	color: rgb(97, 97, 97);
+}
+.sideBar h3{
+	font-size: 15px;
+	line-height:0.8;
+}
+.Button{
+	float:left;
+	margin-left:30px;
+	/*padding:0px 5px 0px 5px;
+	border: 1px solid black;*/
+
+}
+.Button h1{
+	border:1px solid black;
+	padding: 0 5px 0 5px;
+}
+.Button a{
+	text-decoration: none;
+	color:#9D9897;
+}
+.slider: webkit-slider-thumb{
+	border-radius: 50%;
+}
