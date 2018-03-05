@@ -1,13 +1,10 @@
 @media(max-width: 3400px) {
 
 #header{
-<<<<<<< HEAD
 	max-width: 1300px;
 	height: 100px;
-=======
 	max-width: 3300px;
 	height: 150px;
->>>>>>> a3e1d0407a307db832a3937a3fecc357f1c9e9db
 	/*border: 2px solid red;*/
 	background: black;
 	/*font-family: 'Popins', sans-serif;*/
@@ -16,11 +13,8 @@
 	color: white;
 	text-align:center;
 	opacity: .75;
-<<<<<<< HEAD
 	margin: -30px -10px 0px -10px;
-=======
 	margin: -21px -20px 0px -10px;
->>>>>>> a3e1d0407a307db832a3937a3fecc357f1c9e9db
 }
 h1 {
 	position:relative;
@@ -29,23 +23,17 @@ h1 {
 }
 
 body {
-<<<<<<< HEAD
 	/*background-color:red;*/
-=======
 	background-color:red;
 
->>>>>>> a3e1d0407a307db832a3937a3fecc357f1c9e9db
 }
 
 
 #body{
-<<<<<<< HEAD
 	max-width:1700px;
 	height:800px;
-=======
 	max-width:3700px;
 	height:600px;
->>>>>>> a3e1d0407a307db832a3937a3fecc357f1c9e9db
 	/*border: 2px solid blue;*/
 	margin: -22px -20px 0px -10px;
 	background-color:white;
