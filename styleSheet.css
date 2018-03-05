@@ -14,7 +14,7 @@
 	text-align:center;
 	opacity: .75;
 	margin: -30px -10px 0px -10px;
-	margin: -21px -20px 0px -10px;
+	/*margin: -21px -20px 0px -10px;*/
 }
 h1 {
 	position:relative;
@@ -23,9 +23,7 @@ h1 {
 }
 
 body {
-	/*background-color:red;*/
-	/*background-color:red;*/
-
+	
 }
 
 
@@ -160,17 +158,35 @@ body {
 	text-align: center; /* givin center align to the paragraph */
 	color:black;
 }						/* closing paragraph style */
-footer{ 		/*starting style for the footer of the page*/
+#footer{ 		/*starting style for the footer of the page*/
+	position: relative;
+	bottom:0;
 	max-width:3300px;
 	height:150px;
 	background-color: black;
-	color: white;
+	opacity: .8;
+	color: black;
 	font-family: 'Playfair Display', serif;
 	/*margin: -23px 6px 0px -10px;*/
-	padding: 20px 0px 0px 25px;
-	margin:0px -20px 100px -10px;
-	
-
+	padding: 5px 0px 5px 170px;
+	margin:10px -20px -10px -10px;
+}
+.footerBox{
+	/*text-align: center;*/
+	float:left;
+	margin-left:20px;
+	width:200px;
+	height:140px;
+	border-left: 1px solid #9D9897;
+	color:#9D9897;
+	padding: 0;
+}
+.footerBox a{
+	text-decoration: none;
+	color:#9D9897;
+}
+.footerBox ul{
+	list-style-type: none;
 }
 .signIt{ /* This is the sign in button, will turn this into class */ 
 	float: right;
@@ -226,4 +242,5 @@ footer{ 		/*starting style for the footer of the page*/
 }
 .slider: webkit-slider-thumb{
 	border-radius: 50%;
+}
 }
