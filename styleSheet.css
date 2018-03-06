@@ -25,6 +25,34 @@ h1 {
 body {
 	
 }
+.buy{
+  background: #ff9900;
+  background-image: -webkit-linear-gradient(top, #ff9900, #b8782b);
+  background-image: -moz-linear-gradient(top, #ff9900, #b8782b);
+  background-image: -ms-linear-gradient(top, #ff9900, #b8782b);
+  background-image: -o-linear-gradient(top, #ff9900, #b8782b);
+  background-image: linear-gradient(to bottom, #ff9900, #b8782b);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Georgia;
+  color: #1a1103;
+  font-size: 12px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  font-family: 'Berkshire Swash', cursive;
+}
+
+.buy:hover{
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+  cursor:pointer;
+}
 
 
 #body{
@@ -129,40 +157,64 @@ body {
 	.sidenav {padding-top: 15px;}
 	.sidenav a{font-size: 18px;}
 }
-.itemBlock{    /*<!-- this is the item block -->*/
-	width:400px;
-	height:500px;
+.itemBlob{    
+	width:150px;
+	height:250px;
 	border: 1px solid gray;
 	background-color: #f0efef;
 	margin: 30px;
-	float: left;
-
-}					/* closing the item block */
-.itemBlock a{
-	text-decoration: none; /* style for the links in the item block */
+	margin: 10px 10px 10px 10px;
+	/*float:right;*/
+	/*float:left;*/
+	/*position:relative !important;
+	top:-600px !important;*/
+	/*bottom: ;*/
+	/*ottom: 400px;*/
+	/*right:  300px;*/
 }
-.itemBlockHeder{ /* new devision inside the item block that present the header of the devision */
+.products{
+	position:relative !important;
+	top:-400px !important;
+	left:350px;
+	right:0px;
+	height:500px;
+	width:500px;
+
+} /* closing the item block */
+#p1 {
+	/*float:left;*/
+	position:relative;
+	top:-262px;
+	left:250px;
+}					
+#p2 {
+	position:relative;
+	top:-524px;
+	left:500px;
+}
+/*itemBox a{
+	text-de*/ /* style for the links in the item block */
+.itemHead{  /*new devision inside the item block that present the header of the devision */
 	height:50px;
-	margin-top:-20px;
-	font-family: 'Playfair Display', serif;
+	margin-top:30px;
+	font-family: 'Berkshire Swash', cursive;
 	text-align:center;
 	/*background: gray;*/
 	opacity: 0.5;
-}						/* closing the header division of the item block devision */
-.itemBlockBody img{ /* styling the images inside of the item block */
-	width: 400px;
-	height: 350px;
-	font-family: 'Playfair Display', serif;
+} /* closing the header division of the item block devision */
+.itemImage img{ 
+	width:150px;
+	height:125px;
+	 /*styling the images inside of the item block */
 }					/* closing images styling */
-.itemBlockFooter p{ /* style for the paragraph of the footer devision that is part of the item block */
+.itemBottom {  /*style for the paragraph of the footer devision that is part of the item block */
 	text-align: center; /* givin center align to the paragraph */
-	color:black;
 }						/* closing paragraph style */
-#footer{ 		/*starting style for the footer of the page*/
-	position: relative;
-	bottom:0;
+#donut{ 		/*starting style for the footer of the page*/
+	position:relative;
+	top:0px;
 	max-width:3300px;
-	height:150px;
+	height:180px;
 	background-color: black;
 	opacity: .8;
 	color: black;
@@ -171,7 +223,7 @@ body {
 	padding: 5px 0px 5px 170px;
 	margin:10px -20px -10px -10px;
 }
-.footerBox{
+.donutBox{
 	/*text-align: center;*/
 	float:left;
 	margin-left:20px;
@@ -181,11 +233,11 @@ body {
 	color:#9D9897;
 	padding: 0;
 }
-.footerBox a{
+.donutBox a{
 	text-decoration: none;
 	color:#9D9897;
 }
-.footerBox ul{
+.donutBox ul{
 	list-style-type: none;
 }
 .signIt{ /* This is the sign in button, will turn this into class */ 
@@ -210,7 +262,8 @@ body {
 	/*font-family: 'Source Sans Pro', sans-serif;*/
 		color:#9D9897;
 	padding:0px 0px 10px 10px;
-	margin:10px o 10px 0;
+	margin:10px 0 10px 0;
+
 
 }
 .sideBar h1{
