@@ -54,16 +54,16 @@ body {
   cursor:pointer;
 }
 
-
+/*
 #body{
 	max-width:1700px;
 	height:800px;
 	max-width:3700px;
 	height:600px;
-	/*border: 2px solid blue;*/
+	border: 2px solid blue;
 	margin: -22px -20px 0px -10px;
 	background-color:white;
-}
+}*/
 .topnav button{
 	float:right;
 	position:relative;
@@ -91,6 +91,8 @@ body {
 	background:black;
 	color:white;
 	font-size: 30px;
+
+}
 
 }
 
