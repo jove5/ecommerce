@@ -33,6 +33,12 @@
 						
 			</div>
 		</div>
+		<div class"slideShow" style="max-width:500px">
+			<img class="slidePic" src="images/handBags.jpg" style="width:100%">
+			<img class="slidePic" src="images/handBags2.jpeg" style="width:100%">
+			<img class="slidePic" src="images/handBags3.jpg" style="width:100%">
+			<img class="slidePic" src="images/Gucci-Mini-Fragrance-Set-for-Women-4-.jpg" style="width:100%">
+		</div>
 		<div class="sideBar">
 			<h1>Filters</h1>
 			<h2>Catergories</h2>
@@ -168,6 +174,19 @@ function openNav() {
 function closeNav() {
 	document.getElementById("mySidenav").style.width = "0px";
 }
+var slidePosition = 0;
+		slide();
+		function slide (){
+			var x;
+			var y= document.getElementsByClassName("slidePic");
+			for(x = 0; x< y.length; x++){
+				y[x].style.display = " none ";			
+			}
+			slidePosition++;
+			if( slidePosition > y.length) {slidePosition = 1}
+			y[slidePosition - 1].style.display = "block";
+			setTimeout(slide, 2000);
+		}
 </script>
 
 <!-- utilized some Javascript functions to make the nav bar open and close  -->
