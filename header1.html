@@ -12,7 +12,7 @@
 	<body>
 		<div id="header">
 			<h1> Jovani </h1> <!-- random name that I thought of rhymes with Armani combines my Aasim's last name and Jovan's first name  -->
-			<button class = "signIt">Sign-In</button>
+			<button class = "signIt" onclick="openSign()">Sign-In</button>
 			<button class = "cart"><i class="fa fa-shopping-cart"></i></button>
 		<div class = "topnav">
 			<input type ="text" placeholder = "Search..">
@@ -33,6 +33,26 @@
 						
 			</div>
 		</div>
+			<div id="signBg"> <!-- Sign In Form -->
+		<div id="signForm">
+				<p id="signHead">
+					Jovani<br/> Sign in to Jovani
+				</p>
+			<div id="closeB" title="close sign in form" onclick="closeSign()">
+
+				<p>
+					X
+				</p>
+			</div>
+			<input type="text" id="myText" value=""> <br/>
+			<form>
+				
+				<input type="text" name="password" placeholder="Passwordl"><br/>
+				
+			</form><br/>
+			<input type="submit"  onclick="closeSign(), submitSign()">
+	</div>
+</div> <!-- ending sign in form-->
 		<div class"slideShow" style="max-width:500px">
 			<img class="slidePic" src="images/handBags.jpg" style="width:100%">
 			<img class="slidePic" src="images/handBags2.jpeg" style="width:100%">
@@ -168,6 +188,8 @@
 
 </html>
 <script> 
+	
+
 function openNav() { 
 	document.getElementById("mySidenav").style.width = "250px"; 
 }
@@ -187,6 +209,26 @@ var slidePosition = 0;
 			y[slidePosition - 1].style.display = "block";
 			setTimeout(slide, 2000);
 		}
+
+	
+</script>
+
+<script type="text/javascript">
+	var signDiv = document.getElementById("signBg");
+	var b = document.getElementById("signIt");
+	var n= document.getElementById("myText").value;
+function openSign(){
+		signDiv.style.display = "block";
+	}
+	function closeSign(){
+		signDiv.style.display = "none";
+	}
+	function submitSign(){
+		
+		document.getElementById("userName").innerHTML = "Welcome "+ n;
+		signDiv.style.display = "none";
+		b.style.display = "none";
+	}
 </script>
 
 <!-- utilized some Javascript functions to make the nav bar open and close  -->
