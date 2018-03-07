@@ -34,7 +34,7 @@
 			</div>
 		</div> <!-- Close side navigation bar-->
 	
-			<div id="signBg"> <!-- Sign In Form -->
+				<div id="signBg"> <!-- Sign In Form -->
 		<div id="signForm">
 				<p id="signHead">
 					Jovani<br/> Sign in to Jovani
@@ -45,15 +45,16 @@
 					X
 				</p>
 			</div>
-			<input type="text" id="myText" value=""> <br/>
+			<input type="text" id="myText" value="" placeholder="User Name"> <br/>
 			<form>
 				
-				<input type="text" name="password" placeholder="Passwordl"><br/>
+				<input type="text" name="password" placeholder="Password"><br/>
 				
 			</form><br/>
-			<input type="submit"  onclick="closeSign(), submitSign()">
+			<input id="subButton"type="submit"  onclick="submitSign()">
+			<a href="#" id="forgotPasword">Forgot Pasword</a> 
 	</div>
-</div> <!-- ending sign in form-->
+</div> <!-- end of sign in form -->
 		
 		<div class"slideShow" style="max-width:500px">
 			<img class="slidePic" src="images/handBags.jpg" style="width:100%">
