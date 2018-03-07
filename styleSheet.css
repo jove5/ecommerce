@@ -126,11 +126,14 @@ body {
   text-decoration: none;
   cursor:pointer;
 }
-/*.slideShow{
-	width:400px;
-	height:150px;
-	border:10px solid red;
-}*/
+.slidePic{
+	position:absolute !important;
+	top:170px;
+	left:320px !important;
+	width:100px;
+	height:450px;
+	border:1px solid black;
+}
 /*
 #body{
 	max-width:1700px;
@@ -282,14 +285,15 @@ body {
 	/*ottom: 400px;*/
 	/*right:  300px;*/
 }
+/*made change*/
 .products{
 	position:relative !important;
-	top:-400px !important;
+	top:-100px !important;
 	left:350px;
 	right:0px;
 	height:500px;
 	width:500px;
-
+/*end change*/
 } /* closing the item block */
 #p1 {
 	/*float:left;*/
