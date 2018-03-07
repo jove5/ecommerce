@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="styleSheet.css">
+	<title></title>
+</head>
+<body>
+	<p id="userName"></p>
+	<button id="signIt" onclick="openSign()">Sign-In</button>
+	<div id="signBg">
+		<div id="signForm">
+				<p id="signHead">
+					Jovani<br/> Sign in to Jovani
+				</p>
+			<div id="closeB" title="close sign in form" onclick="closeSign()">
+
+				<p>
+					X
+				</p>
+			</div>
+			<input type="text" id="myText" value=""> <br/>
+			<form>
+				
+				<input type="text" name="password" placeholder="Passwordl"><br/>
+				
+			</form><br/>
+			<input type="submit" name="" onclick="closeSign(), submitSign()">
+	</div>
+</div>
+
+</body>
+<script type="text/javascript">
+	var signDiv = document.getElementById("signBg");
+	var b = document.getElementById("signIt");
+	var n= document.getElementById("myText").value;
+	function openSign(){
+		signDiv.style.display = "block";
+	}
+	function closeSign(){
+		signDiv.style.display = "none";
+	}
+	function submitSign(){
+		
+		document.getElementById("userName").innerHTML = "Welcome "+ n;
+		signDiv.style.display = "none";
+		b.style.display = "none";
+		
+
+	}
+</script>
+</html>
+
+
+
+
+
