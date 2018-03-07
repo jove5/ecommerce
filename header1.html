@@ -20,7 +20,7 @@
 		</div>
 
 
-			<div id= "main">
+			<div id= "main"> <!-- Side Navigation Bar-->
 				<div id = "mySidenav" class="sidenav">
 					<a href = "javascript:void(0)" class =           "closebutton" onclick="closeNav()">&times;></a>
 					<a href="#">About</a>
@@ -32,7 +32,8 @@
 				<span onclick = "openNav()"><a href="#">&#9776;</a></span>
 						
 			</div>
-		</div>
+		</div> <!-- Close side navigation bar-->
+	
 			<div id="signBg"> <!-- Sign In Form -->
 		<div id="signForm">
 				<p id="signHead">
@@ -53,9 +54,10 @@
 			<input type="submit"  onclick="closeSign(), submitSign()">
 	</div>
 </div> <!-- ending sign in form-->
+		
 		<div class"slideShow" style="max-width:500px">
 			<img class="slidePic" src="images/handBags.jpg" style="width:100%">
-			<img class="slidePic" src="images/handBags2.jpeg" style="width:100%">
+			<img class="slidePic" src="images/handBags2.jpg" style="width:100%">
 			<img class="slidePic" src="images/handBags3.jpg" style="width:100%">
 			<img class="slidePic" src="images/Gucci-Mini-Fragrance-Set-for-Women-4-.jpg" style="width:100%">
 		</div>
@@ -121,25 +123,52 @@
 			<div class = "itemBottom">
 				<button class = "buy">Buy It Now!</button>
 		</div>
-</div>
+		</div>
+
+		<a href = "#" id = "modalPopup" onclick="modalOpen()">
 		<div class = "itemBlob" id = "p1">
 			<div class = "itemHead">
 				<p>Because It's You By Emporio Armani</p>
 			</div>
-			<div class = "itemImage">
+			<div class = "itemImage" id = "itemImage1">
 				<img src="images/perfume1.jpg" alt = "perfume">
-			</div>
+			</div></a>
 			<div class = "itemBottom">
 				<button class = "buy">Buy It Now!</button>
+			</div>
+
+			<div id = "itemPop">
+	<!-- <div id = "itemPopout">
+		<p id= "itemName">
+		</p>
+	<div id = "closeI" title="close product popout" onclick="closePop">
+
+	<p>X</p>
+ -->
+ 			<!-- <button id = "myBtn">Open Modal </button> -->
+
+ 			<div id = "myModal" class = "modal">
+ 			
+ 			<div class ="modal-content">
+ 				<span class = "close">&times;</span>
+ 			
+ 			<img id = "modalImage" src = "images/perfume1.jpg" >
+ 			<p>Fragrance for her with notes of Vanilla, Raspberry and Rose. The fragrance plays with her powers of seduction as vanilla mixes with musk, revealing a complex and incredibly deep sensuality. Bold and immediately captivating, her fragrance expresses the urgency of a love that takes every chance to declare itself: BECAUSE IT’S YOU. </p>
+ 			<button class = "priceAndPurchase">1.7 fl oz 59.99</button>
+
+				</div>
+			</div>
 		</div>
-</div>
+	</div>
+
+		<a href = "#" id = "modalPopup" onclick="modalOpen()">
 		<div class = "itemBlob" id = "p2">
 			<div class = "itemHead">
 				<p>Because It's You By Emporio Armani</p>
 			</div>
 			<div class = "itemImage">
 				<img src="images/perfume1.jpg" alt = "perfume">
-			</div>
+			</div></a>
 			<div class = "itemBottom">
 				<button class = "buy">Buy It Now!</button>
 		</div>
@@ -187,6 +216,7 @@
 	</body>
 
 </html>
+
 <script> 
 	
 
@@ -229,6 +259,40 @@ function openSign(){
 		signDiv.style.display = "none";
 		b.style.display = "none";
 	}
+</script>
+
+<script> //The following code is used to make popups of the products
+
+
+var modal = document.getElementById('myModal');
+// var btn = document.getElementById('myBtn');
+// var itemImage2 = document.getElementById('perfume').src;
+
+var span = document.getElementsByClassName("close")[0];
+
+// btn.onclick = function() {
+// 	modal.style.display = "block";
+// }
+span.onclick = function() {
+	modal.style.display = "none";
+}
+// document.getElementById(modalImage).src = itemImage2;
+window.onclick = function(event) {
+	if(event.target == modal) {
+		modal.style.display = "none";
+	}
+};
+</script>
+<script>
+function modalOpen(){
+	modal.style.display = "block"
+} 
+
+// window.onclick = function(event){
+// 	if(event.target == modal) {
+// 		modal.style.display = "none";
+// 	}
+// }
 </script>
 
 <!-- utilized some Javascript functions to make the nav bar open and close  -->
