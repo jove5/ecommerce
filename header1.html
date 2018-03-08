@@ -27,7 +27,7 @@
 					<a href="#">About</a>
 					<a href="#">Services</a>
 					<a href="#" onclick="extend()" id="invent" >Inventory +</a>
-					<div id="expandInventory">
+					<div id="expentInventory">
 						<a href="#"><p>Armani</p></a>
 						<a href="#"><p>Gucci</p></a>
 						<a href="#"><p>Prada</p></a>
@@ -69,7 +69,7 @@
 		</div>
 				<!-- SlideShow end -->
 		<div class="sideBar">
-			<h1>Filters</h1>
+			<h2>Filters</h2>
 			<break>
 			<h2>Catergories</h2>
 			<h3><a href="#">Fragrances ></a></h3>
@@ -79,10 +79,10 @@
 			<input type="range" min="0" value="10" max="100000" class="slider" id="sideBarSlider">
 			<div class="priceButtonsSideBar">
 				<div class="Button">
-					<a href="#"><h1>Min ></h1></a>
+					<a href="#"><h2>Min ></h2></a>
 				</div>
 				<div class="Button">
-					<a href="#"><h1>Max > </h1></a>
+					<a href="#"><h2>Max > </h2></a>
 				</div>
 			</div>
 			<br/><br/><br/>
@@ -189,7 +189,7 @@
 					<p>Polo Black By Ralph Lauren</p>
 				</div>
 				<div class = "itemImage">
-
+				
 					<img src="images/perfume3.jpg" alt = "perfume">
 				</div>
 		</a>
@@ -212,21 +212,6 @@
 				</div>
 			</div>
 				
-				<a href = "#" id = "modalPopup" onclick="modalOpen()">
-			<div class = "itemBlob" id = "p5">
-				<div class = "itemHead">
-					<p>SpiceBomb By Victor & Rolf</p>
-				</div>
-				<div class = "itemImage">
-
-					<img src="images/perfume6.jpg" alt = "perfume">
-				</div>
-		</a>
-				<div class = "itemBottom">
-					<button class = "buy">Buy It Now!</buttaon>
-				</div>
-			
-				</div>
 
 		</div>
 
@@ -371,7 +356,7 @@ function closeNav() {
 </script>
 <script type="text/javascript">
 function extend(){
-	var ch = document.getElementById("expandInventory");
+	var ch = document.getElementById("expentInventory");
 	if(ch.style.display==="none"){
 		ch.style.display ="block";
 		document.getElementById("invent").innerHTML ="Inventory -"
