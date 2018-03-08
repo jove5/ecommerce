@@ -317,8 +317,15 @@ body {
 	top:-524px;
 	left:500px;
 }
+/*#p3{
+	position:relative;
+	top:600;
+}*/
 /*itemBox a{
 	text-de*/ /* style for the links in the item block */
+.imagePosition{
+	position:relative;
+}
 .itemHead{  /*new devision inside the item block that present the header of the devision */
 	height:50px;
 	margin-top:30px;
