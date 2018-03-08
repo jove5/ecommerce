@@ -171,6 +171,7 @@ body {
 	background:black;
 	color:white;
 	font-size: 30px;
+	cursor: pointer;
 
 }
 
@@ -192,14 +193,14 @@ body {
 	height:100%;
 	width: 0;
 	position: fixed;
-	z-index:1; /*the zindex allows us to keep the side nav in front of the screen*/ 
+	z-index:3; /*the zindex allows us to keep the side nav in front of the screen*/ 
 	top: 0; /*utilized for the position of the start point of drawing*/
 	left: 0;
-	background-color: #111;
+	background-color: black;
 	overflow-x: hidden;
 	padding-top: 60px;
 	transition: 0.5s; /*this element did not seem to work since it was not highlighted blue */
-	
+
 
 }
 .sidenav a{ /*this is the interaction between the side nav and navigation on the website*/
@@ -220,6 +221,16 @@ body {
 	font-size: 36px;
 	margin-left: 50px;
 }
+#expentInventory{
+	display: none;
+	
+}
+#expentInventory a{
+	padding: 0;
+	margin-left:32px;
+	font-size: 16px !important;
+}
+
 #main { /*this was in order to maintain the positioning of the overall nav bar */
 	transition: margin-left .5s;
 	padding: 20px;
@@ -354,7 +365,7 @@ body {
 .donutBox ul{
 	list-style-type: none;
 }
-.signIt{ /* This is the sign in button, will turn this into class */ 
+#signIt{ /* This is the sign in button, will turn this into class */ 
 	float: right;
 	position:relative;
 	top: -43px;
@@ -367,6 +378,14 @@ body {
 	font-family: 'Berkshire Swash', cursive;
 	/*padding-right:20px;*/
 	/*margin-right:20px;*/
+	display: block;
+	cursor: pointer;
+}
+#userName{
+	color: white;
+	font-size: 20px;
+	float: right;
+	padding-right: 20px;
 }
 .sideBar{
 	margin-top:30px;
@@ -374,11 +393,13 @@ body {
 	/*height:600px;*/
 	border: 1px solid gray;
 	/*font-family: 'Source Sans Pro', sans-serif;*/
-		color:#9D9897;
+	color:#9D9897;
 	padding:0px 0px 10px 10px;
 	margin:10px 0 10px 0;
-
-
+}
+.sideBar a{
+	text-decoration: none;
+	color:#9D9897;
 }
 .sideBar h1{
 

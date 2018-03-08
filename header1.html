@@ -12,64 +12,69 @@
 	<body>
 		<div id="header">
 			<h1> Jovani </h1> <!-- random name that I thought of rhymes with Armani combines my Aasim's last name and Jovan's first name  -->
-			<button class = "signIt" onclick="openSign()">Sign-In</button>
+			<p id="userName"></p>
+			<button id = "signIt" onclick="openSign()">Sign-In</button>
 			<button class = "cart"><i class="fa fa-shopping-cart"></i></button>
-		<div class = "topnav">
-			<input type ="text" placeholder = "Search..">
-			<button type="submit"><i class = "fa fa-search"></i></button> 
-		</div>
+			<div class = "topnav">
+				<input type ="text" placeholder = "Search..">
+				<button type="submit"><i class = "fa fa-search"></i></button> 
+			</div>
 
 
 			<div id= "main"> <!-- Side Navigation Bar-->
 				<div id = "mySidenav" class="sidenav">
-					<a href = "javascript:void(0)" class =           "closebutton" onclick="closeNav()">&times;></a>
+					<a href = "javascript:void(0)" class ="closebutton" onclick="closeNav()">&times;</a>
 					<a href="#">About</a>
 					<a href="#">Services</a>
-					<a href="#">Inventory</a>
+					<a href="#" onclick="extend()" id="invent" >Inventory +</a>
+					<div id="expentInventory">
+						<a href="#"><p>Armani</p></a>
+						<a href="#"><p>Gucci</p></a>
+						<a href="#"><p>Prada</p></a>
+						<a href="#"><p>Louis Vutton</p></a>
+						<a href="#"><p>Channel</p></a>
+						<a href="#"><p>Fendi</p></a>
+						<a href="#"><p>Hermes</p></a>
+					</div>
 					<a href="#">Contact</a>
 				</div>
-			
-				<span onclick = "openNav()"><a href="#">&#9776;</a></span>
-						
+				<span onclick="openNav()"><a href="#">&#9776;</a></span>	
 			</div>
 		</div> <!-- Close side navigation bar-->
 	
-				<div id="signBg"> <!-- Sign In Form -->
-		<div id="signForm">
+		<div id="signBg"> <!-- Sign In Form -->
+			<div id="signForm">
 				<p id="signHead">
 					Jovani<br/> Sign in to Jovani
 				</p>
-			<div id="closeB" title="close sign in form" onclick="closeSign()">
-
-				<p>
-					X
-				</p>
+				<div id="closeB" title="close sign in form" onclick="closeSign()">
+					<p>
+						X
+					</p>
+				</div>
+				<input type="text" id="myText" value="" placeholder="User Name"> <br/>
+				<form>
+					<input type="text" name="password" placeholder="Password"><br/>		
+				</form><br/>
+				<input id="subButton" type="submit"  onclick="submitSign()">
+				<a href="#" id="forgotPasword">Forgot Pasword</a> 
 			</div>
-			<input type="text" id="myText" value="" placeholder="User Name"> <br/>
-			<form>
-				
-				<input type="text" name="password" placeholder="Password"><br/>
-				
-			</form><br/>
-			<input id="subButton"type="submit"  onclick="submitSign()">
-			<a href="#" id="forgotPasword">Forgot Pasword</a> 
-	</div>
-</div> <!-- end of sign in form -->
-		<!--- SlideShow block start -->
+		</div> <!-- end of sign in form -->
+				<!--- SlideShow block start -->
 		<div class"slideShow" style="max-width:200px">
 			<img class="slidePic" src="images/handBags.jpg" style="width:65%">
 			<img class="slidePic" src="images/handBags2.jpg" style="width:65%">
 			<img class="slidePic" src="images/handBags3.jpg" style="width:65%">
 			<img class="slidePic" src="images/Gucci-Mini-Fragrance-Set-for-Women-4-.jpg" style="width:65%">
 		</div>
-		<!-- SlideShow end -->
+				<!-- SlideShow end -->
 		<div class="sideBar">
 			<h1>Filters</h1>
 			<break>
 			<h2>Catergories</h2>
-			<h3>Fragrances ></h3>
-			<h3>Handbags > </h3>
-			<h3>Wine > </h3>
+			<h3><a href="#">Fragrances ></a></h3>
+			<h3><a href="#">Handbags ></a> </h3>
+			<h3><a href="#">Wine ></a> </h3>
 			<h2>Price</h2>
 			<input type="range" min="0" value="10" max="100000" class="slider" id="sideBarSlider">
 			<div class="priceButtonsSideBar">
@@ -81,33 +86,33 @@
 				</div>
 			</div>
 			<br/><br/><br/>
-			<h2>Brands</h2>
-			<h3>Armani ></h3>
-			<h3>Gucci > </h3>
-			<h3>Prada > </h3>
-			<h3>Louis Vutton> </h3>
-			<h3>Channel ></h3>
-			<h3>Fendi ></h3>
-			<h3>Hermes ></h3>
+			<h2><a href="#">Brands</h2>
+			<h3><a href="#">Armani ></a></h3>
+			<h3><a href="#">Gucci ></a> </h3>
+			<h3><a href="#">Prada > </a></h3>
+			<h3><a href="#">Louis Vutton ></a> </h3>
+			<h3><a href="#">Channel ></a></h3>
+			<h3><a href="#">Fendi ></a></h3>
+			<h3><a href="#">Hermes ></a></h3>
 			<div class="checkboxSideBox">
 				<label> 
 					<input type="checkbox" >
-				Red
+						Red
 				</label>
 				<br/>
 				<label> 
 					<input type="checkbox" >
-				Green
+						Green
 				</label>
 				<br/>
 				<label> 
 					<input type="checkbox" >
-				Blue
+						Blue
 				</label>
 				<br/>
 				<label> 
 					<input type="checkbox" >
-				White
+						White
 				</label>
 				<br/>
 			</div>
@@ -115,29 +120,29 @@
 
 		<div class = "products"> <!--this is the section for products -->
 
-		<div class = "itemBlob">
-			<div class = "itemHead">
-				<p>Because It's You By Emporio Armani</p>
+			<div class = "itemBlob">
+				<div class = "itemHead">
+					<p>Because It's You By Emporio Armani</p>
+				</div>
+				<div class = "itemImage">
+					<img src="images/perfume1.jpg" alt = "perfume">
+				</div>
+				<div class = "itemBottom">
+					<button class = "buy">Buy It Now!</button>
+				</div>
 			</div>
-			<div class = "itemImage">
-				<img src="images/perfume1.jpg" alt = "perfume">
-			</div>
-			<div class = "itemBottom">
-				<button class = "buy">Buy It Now!</button>
-		</div>
-		</div>
 
-		<a href = "#" id = "modalPopup" onclick="modalOpen()">
-		<div class = "itemBlob" id = "p1">
-			<div class = "itemHead">
-				<p>Because It's You By Emporio Armani</p>
-			</div>
-			<div class = "itemImage" id = "itemImage1">
-				<img src="images/perfume1.jpg" alt = "perfume">
-			</div></a>
-			<div class = "itemBottom">
-				<button class = "buy">Buy It Now!</button>
-			</div>
+			<a href = "#" id = "modalPopup" onclick="modalOpen()">
+			<div class = "itemBlob" id = "p1">
+				<div class = "itemHead">
+					<p>Because It's You By Emporio Armani</p>
+				</div>
+				<div class = "itemImage" id = "itemImage1">
+					<img src="images/perfume1.jpg" alt = "perfume">
+				</div></a>
+				<div class = "itemBottom">
+					<button class = "buy">Buy It Now!</button>
+				</div>
 
 			<div id = "itemPop">
 	<!-- <div id = "itemPopout">
@@ -160,21 +165,22 @@
 
 				</div>
 			</div>
+			</div>
 		</div>
-	</div>
 
 		<a href = "#" id = "modalPopup" onclick="modalOpen()">
-		<div class = "itemBlob" id = "p2">
-			<div class = "itemHead">
-				<p>Because It's You By Emporio Armani</p>
+			<div class = "itemBlob" id = "p2">
+				<div class = "itemHead">
+					<p>Because It's You By Emporio Armani</p>
+				</div>
+				<div class = "itemImage">
+					<img src="images/perfume1.jpg" alt = "perfume">
+				</div>
+		</a>
+				<div class = "itemBottom">
+					<button class = "buy">Buy It Now!</button>
+				</div>
 			</div>
-			<div class = "itemImage">
-				<img src="images/perfume1.jpg" alt = "perfume">
-			</div></a>
-			<div class = "itemBottom">
-				<button class = "buy">Buy It Now!</button>
-		</div>
-	</div>
 </div>
 		<!-- <div id="body">
 			<div class="itemBlock"> <! here starts the division for item description with picture  -->
@@ -213,21 +219,36 @@
 			</div>
 			<div class="donutBox">
 			</div>
-
 		</div> 
 	</body>
 
 </html>
 
 <script> 
-	
-
+//////////////////////////////////////////////////////////////////
+// side navigation
 function openNav() { 
 	document.getElementById("mySidenav").style.width = "250px"; 
 }
 function closeNav() {
 	document.getElementById("mySidenav").style.width = "0px";
 }
+</script>
+<script type="text/javascript">
+function extend(){
+	var ch = document.getElementById("expentInventory");
+	if(ch.style.display==="none"){
+		ch.style.display ="block";
+		document.getElementById("invent").innerHTML ="Inventory -"
+	}
+	else{
+		ch.style.display = "none";
+		document.getElementById("invent").innerHTML ="Inventory +"
+	}
+}
+// ending side navigation
+////////////////////////////////////////////////////////////
+
 ////////////////////////////////////////////////////////////
 // slideShow function
 var slidePosition = 0;
@@ -249,9 +270,8 @@ var slidePosition = 0;
 </script>
 
 <script type="text/javascript">
+	
 	var signDiv = document.getElementById("signBg");
-	var b = document.getElementById("signIt");
-	// var n= document.getElementById("myText").value;
 function openSign(){
 		signDiv.style.display = "block";
 	}
@@ -260,9 +280,11 @@ function openSign(){
 	}
 	function submitSign(){
 		
-		// document.getElementById("userName").innerHTML = "Welcome "+ n;
+		var b = document.getElementById("signIt");
+		var n = document.getElementById("myText").value;
 		signDiv.style.display = "none";
-		b.style.display = "none";
+		b.style.display ="none";
+		document.getElementById("userName").innerHTML = "Welcome "+ n;
 	}
 </script>
 
