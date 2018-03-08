@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="styleSheet.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		<!-- <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet"> -->
 		<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
@@ -11,48 +12,381 @@
 	<body>
 		<div id="header">
 			<h1> Jovani </h1> <!-- random name that I thought of rhymes with Armani combines my Aasim's last name and Jovan's first name  -->
-			<button>Sign-In</button>
+			<p id="userName"></p>
+			<button id = "signIt" onclick="openSign()">Sign-In</button>
+			<button class = "cart"><i class="fa fa-shopping-cart"></i></button>
+			<div class = "topnav">
+				<input type ="text" placeholder = "Search..">
+				<button type="submit"><i class = "fa fa-search"></i></button> 
+			</div>
 
-			<div id= "main">
+
+			<div id= "main"> <!-- Side Navigation Bar-->
 				<div id = "mySidenav" class="sidenav">
-					<a href = "javascript:void(0)" class =           "closebutton" onclick="closeNav()">&times;></a>
+					<a href = "javascript:void(0)" class ="closebutton" onclick="closeNav()">&times;</a>
 					<a href="#">About</a>
 					<a href="#">Services</a>
-					<a href="#">Inventory</a>
+					<a href="#">Inventory <samp onclick="extend()" id="invent" style="cursor: pointer"> + </samp></a>
+					<div id="expentInventory">
+						<a href="#"><p>Armani</p></a>
+						<a href="#"><p>Gucci</p></a>
+						<a href="#"><p>Prada</p></a>
+						<a href="#"><p>Louis Vutton</p></a>
+						<a href="#"><p>Channel</p></a>
+						<a href="#"><p>Fendi</p></a>
+						<a href="#"><p>Hermes</p></a>
+					</div>
 					<a href="#">Contact</a>
 				</div>
-			
-				<span onclick = "openNav()" style = "margin-right:-20px"><a href="#">&#9776;</a></span>
-						
+				<span onclick="openNav()"><a href="#">&#9776;</a></span>	
+			</div>
+		</div> <!-- Close side navigation bar-->
+	
+		<div id="signBg"> <!-- Sign In Form -->
+			<div id="signForm">
+				<p id="signHead">
+					Jovani<br/> Sign in to Jovani
+				</p>
+				<div id="closeB" title="close sign in form" onclick="closeSign()">
+					<p>
+						X
+					</p>
+				</div>
+				<input type="text" id="myText" value="" placeholder="User Name"> <br/>
+				<form>
+					<input type="text" name="password" placeholder="Password"><br/>		
+				</form><br/>
+				<input id="subButton" type="submit"  onclick="submitSign()">
+				<a href="#" id="forgotPasword">Forgot Pasword</a> 
+			</div>
+		</div> <!-- end of sign in form -->
+				<!--- SlideShow block start -->
+		<div class"slideShow" style="max-width:200px">
+			<div class="sideMenuSlideShow" id="leftMenuSlideShow">
+				<img src="images/arrowLeft.png">
+			</div>
+			<div class="sideMenuSlideShowR" id="RightMenuSlideShow">
+				<img src="images/arrowRight.png">
+			</div>
+			<img class="slidePic" src="images/handBags.jpg" style="width:65%">
+			<img class="slidePic" src="images/handBags2.jpg" style="width:65%">
+			<img class="slidePic" src="images/handBags3.jpg" style="width:65%">
+			<img class="slidePic" src="images/Gucci-Mini-Fragrance-Set-for-Women-4-.jpg" style="width:65%">
+		</div>
+				<!-- SlideShow end -->
+		<div class="sideBar">
+			<h2>Filters</h2>
+			<break>
+			<h2><a href="#">Catergories</a></h2>
+			<h3><a href="#">Fragrances ></a></h3>
+			<h3><a href="#">Handbags ></a> </h3>
+			<h3><a href="#">Wine ></a> </h3>
+			<h2>Price</h2>
+			<input type="range" min="0" value="10" max="100000" class="slider" id="sideBarSlider">
+			<div class="priceButtonsSideBar">
+				<div class="Button">
+					<a href="#"><h2>Min ></h2></a>
+				</div>
+				<div class="Button">
+					<a href="#"><h2>Max > </h2></a>
+				</div>
+			</div>
+			<br/><br/><br/>
+			<h2><a href="#">Brands</h2>
+			<h3><a href="#">Armani ></a></h3>
+			<h3><a href="#">Gucci ></a> </h3>
+			<h3><a href="#">Prada > </a></h3>
+			<h3><a href="#">Louis Vutton ></a> </h3>
+			<h3><a href="#">Channel ></a></h3>
+			<h3><a href="#">Fendi ></a></h3>
+			<h3><a href="#">Hermes ></a></h3>
+			<div class="checkboxSideBox">
+				<label> 
+					<input type="checkbox" >
+						Red
+				</label>
+				<br/>
+				<label> 
+					<input type="checkbox" >
+						Green
+				</label>
+				<br/>
+				<label> 
+					<input type="checkbox" >
+						Blue
+				</label>
+				<br/>
+				<label> 
+					<input type="checkbox" >
+						White
+				</label>
+				<br/>
 			</div>
 		</div>
-		<div id="body">
-			<div class="itemBlock"> <!-- here starts the division for item description with picture  -->
-				<div class="itemBlockHeder"> <!-- this is the heder for the item division -->
-					<a href="#"><h1>Name Of The Poduct</h1></a>
-				</div>							<!-- ending the header division of the item  -->
-				<div class="itemBlockBody"><!--  this is the division for the body of the item where the pictures will take a place  -->
-					<img src="images/perfume1.jpg" alt="parfume"> <!-- this is the image of the product -->
-				</div>						<!-- end of the body devision for the item  -->
-				<div class="itemBlockFooter"><!--  this is the footer of the item devision where we preset price etc... -->
-					<h3><a href="#"><p>price</p></a></h3>
-				</div>  						<!-- ending of the footer of the item devision  -->
-			</div>					<!-- here ends the division for item description with picture  -->
-			<h1>this is body</h1>
+
+		<div class = "products"> <!--this is the section for products -->
+			<div class = "itemBlob">
+				<div class = "itemHead">
+					<p>Luna Rosa Carbon By Prada</p>
+				</div>
+				<div class = "itemImage" id = "p0">
+					<img src="images/perfume2.jpg" alt = "perfume">
+				</div>
+				<div class = "itemBottom">
+					<button class = "buy">Buy It Now!</button>
+				</div>
+			</div>
+
+			<a href = "#" id = "modalPopup" onclick="modalOpen()">
+			<div class = "itemBlob" id = "p1">
+				<div class = "itemHead">
+					<p>Because It's You By Emporio Armani</p>
+				</div>
+				<div class = "itemImage" id = "itemImage1">
+					<img src="images/perfume1.jpg" alt = "perfume">
+				</div></a>
+				<div class = "itemBottom">
+					<button class = "buy">Buy It Now!</button>
+				</div>
+
+			<div id = "itemPop">
+	<!-- <div id = "itemPopout">
+		<p id= "itemName">
+		</p>
+	<div id = "closeI" title="close product popout" onclick="closePop">
+
+	<p>X</p>
+ -->
+ 			<!-- <button id = "myBtn">Open Modal </button> -->
+
+ 			<div id = "myModal" class = "modal">
+ 			
+ 			<div class ="modal-content">
+ 				<span class = "close">&times;</span>
+ 			
+ 			<img id = "modalImage" src = "images/perfume1.jpg" >
+
+ 			<p><h2>Product Description</h2>Fragrance for her with notes of Vanilla, Raspberry and Rose. The fragrance plays with her powers of seduction as vanilla mixes with musk, revealing a complex and incredibly deep sensuality. Bold and immediately captivating, her fragrance expresses the urgency of a love that takes every chance to declare itself: BECAUSE IT’S YOU.</p>
+ 			<button class = "priceAndPurchase">1.7 fl oz 59.99</button>
+ 			<button class = "priceAndPurchase2">3.4 fl oz 79.99</button>
+ 			<h4>Original Price: $69.99</h4>
+ 			<h3>Sale: $59.99</h3>
+ 			<p id = "filling">Return Policy: Returnable within 30 days for a refund or Jovani credits.</p>
+ 			<div class = "miniImage">
+ 				<img src = "images/perfume7.jpg" onmouseover="imageChange(this)" onmouseout = "imageBack(this)"alt = "small">
+ 				<!-- <img src = "images/perfume8.jpg" id = "small2" alt = "small2">
+ 				<img src = "images/perfume9.jpg" id = "small3" alt = "small3"> -->
+ 			</div>
+ 			<div class ="small2">
+ 				<img src = "images/perfume8.jpg" onmouseover="imageChange(this)" onmouseout = "imageBack(this)"alt = "small2">
+ 			</div>
+ 			<div class = "small3">
+ 				<img src = "images/perfume9.jpg" onmouseover="imageChange(this)" onmouseout = "imageBack(this)"alt = "small3">
+ 			</div>
+ 			<form>
+ 				Quantity:
+ 				<input type="number" name="quantity" min="1" max="5">
+ 			</form>
+
+				</div>
+			</div>
+			</div>
 		</div>
-		<!-- <footer>
-			<h5> Our mission is to provide luxury goods at an affordable price to the everyday consumer, have these items delivered instantaneously and seemlessly, and provide our customers with an exceptional experience.</h5>
-			<h6> Connect with us on any of the following social media platforms </h6>
 
-		</footer> -->
+		<!-- <a href = "#" id = "modalPopup" onclick="modalOpen()"> -->
+			<div class = "itemBlob" id = "p2">
+				<div class = "itemHead">
+					<p>Gabrielle Chanel By Chanel</p>
+				</div>
+				<div class = "itemImage">
+					<img src="images/perfume4.jpg" alt = "perfume">
+				</div>
+		<!-- </a> -->
+				<div class = "itemBottom">
+					<button class = "buy">Buy It Now!</button>
+				</div>
+			</div>
+			
+			
+			<!-- <a href = "#" id = "modalPopup" onclick="modalOpen()"> -->
+			<div class = "itemBlob" id = "p3">
+				<div class = "itemHead">
+					<p>Polo Black By Ralph Lauren</p>
+				</div>
+				<div class = "itemImage">
+				
+					<img src="images/perfume3.jpg" alt = "perfume">
+				</div>
+		<!-- </a> -->
+				<div class = "itemBottom">
+					<button class = "buy">Buy It Now!</buttaon>
+				</div>
+			
+				</div>
+			<!-- <a href = "#" id = "modalPopup" onclick="modalOpen()"> -->
+			<div class = "itemBlob" id = "p4">
+				<div class = "itemHead">
+					<p>Gucci Guilty By Gucci</p>
+				</div>
+				<div class = "itemImage">
+					<img src="images/perfume5.jpg" alt = "perfume">
+				</div>
+		<!-- </a> -->
+				<div class = "itemBottom">
+					<button class = "buy">Buy It Now!</button>
+				</div>
+			</div>
+				
+			<!-- <a href = "#" id = "modalPopup" onclick="modalOpen()"> -->
+			<div class = "itemBlob" id = "p5">
+				<div class = "itemHead">
+					<p>SpiceBomb By Victor & Rolf</p>
+				</div>
+				<div class = "itemImage">
+
+					<img src="images/perfume6.jpg" alt = "perfume">
+				</div>
+		<!-- </a> -->
+				<div class = "itemBottom">
+					<button class = "buy">Buy It Now!</buttaon>
+				</div>
+			
+				</div>
+
+		</div>
+
+		</div>
+
+
+			<!-- <a href = "#" id = "modalPopup" onclick="modalOpen()">
+			<div class = "itemBlob" id = "p3">
+				<div class = "itemHead">
+					<p>Because It's You By Emporio Armani</p>
+				</div>
+				<div class = "itemImage">
+					<img src="images/perfume1.jpg" alt = "perfume">
+				</div>
+		</a>
+				<div class = "itemBottom">
+					<button class = "buy">Buy It Now!</button>
+				</div>
+			</div>
+
+			<a href = "#" id = "modalPopup" onclick="modalOpen()">
+			<div class = "itemBlob" id = "p4">
+				<div class = "itemHead">
+					<p>Because It's You By Emporio Armani</p>
+				</div>
+				<div class = "itemImage">
+					<img src="images/perfume1.jpg" alt = "perfume">
+				</div>
+		</a>
+				<div class = "itemBottom">
+					<button class = "buy">Buy It Now!</button>
+				</div>
+			</div>
+
+			<a href = "#" id = "modalPopup" onclick="modalOpen()">
+			<div class = "itemBlob" id = "p5">
+				<div class = "itemHead">
+					<p>Because It's You By Emporio Armani</p>
+				</div>
+				<div class = "itemImage">
+					<img src="images/perfume1.jpg" alt = "perfume">
+				</div>
+		</a>
+				<div class = "itemBottom">
+					<button class = "buy">Buy It Now!</button>
+				</div>
+			</div>
+
+			<a href = "#" id = "modalPopup" onclick="modalOpen()">
+			<div class = "itemBlob" id = "p6">
+				<div class = "itemHead">
+					<p>Because It's You By Emporio Armani</p>
+				</div>
+				<div class = "itemImage">
+					<img src="images/perfume1.jpg" alt = "perfume">
+				</div>
+		</a>
+				<div class = "itemBottom">
+					<button class = "buy">Buy It Now!</button>
+				</div>
+			</div>
+
+			<a href = "#" id = "modalPopup" onclick="modalOpen()">
+			<div class = "itemBlob" id = "p7">
+				<div class = "itemHead">
+					<p>Because It's You By Emporio Armani</p>
+				</div>
+				<div class = "itemImage">
+					<img src="images/perfume1.jpg" alt = "perfume">
+				</div>
+		</a>
+				<div class = "itemBottom">
+					<button class = "buy">Buy It Now!</button>
+				</div>
+			</div>
+
+			<a href = "#" id = "modalPopup" onclick="modalOpen()">
+			<div class = "itemBlob" id = "p8">
+				<div class = "itemHead">
+					<p>Because It's You By Emporio Armani</p>
+				</div>
+				<div class = "itemImage">
+					<img src="images/perfume1.jpg" alt = "perfume">
+				</div>
+		</a>
+				<div class = "itemBottom">
+					<button class = "buy">Buy It Now!</button>
+				</div>
+			</div> -->
+
+		<!-- <div id="body">
+			<div class="itemBlock"> <! here starts the division for item description with picture  -->
+				<!-- <div class="itemBlockHeder"> --> <!-- this is the heder for the item division -->
+					<!-- <a href="#"><h1>Name Of The Poduct</h1></a> -->
+			<!-- 	</div>	 -->						<!-- ending the header division of the item  -->
+				<!-- <div class="itemBlockBody" --><!--  this is the division for the body of the item where the pictures will take a place  -->
+					<!-- <img src="images/perfume1.jpg" alt="parfume"> --> <!-- this is the image of the product -->
+				<!-- </div> -->						<!-- end of the body devision for the item  -->
+				<!-- <div class="itemBlockFooter"> --><!--  this is the footer of the item devision where we preset price etc... -->
+					 						<!-- ending of the footer of the item devision  -->
+			<!-- </div>	 -->				<!-- here ends the division for item description with picture  -->
+			<!-- <h1>this is body</h1> -->
+		<!-- </div> -->
+		
+		<div id="donut">
+			<div class="donutBox">
+				<ul>
+					<li>Phone Number:</li>
+					<li><a href="#">1-800-321-7890</a></li>
+				</ul>
+			</div>
+			<div class="donutBox">
+				<ul>
+					<li><a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="https://commerce.coinbase.com/shopify" target="_blank"><i class="fa fa-bitcoin"></i></a></li>
+					<li><a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a></li>
+				</ul>
+			</div>
+			<div class="donutBox">
+				<ul>
+					<li>acceptable payments</li>
+					<li><i class="fa fa-cc-visa"></i></li>
+				</ul>
+			</div>
+			<div class="donutBox">
+			</div>
+		</div> 
 	</body>
-	<footer>
-			<h5> Our mission is to provide luxury goods at an affordable price to the everyday consumer, have these items delivered instantaneously and seemlessly, and provide our customers with an exceptional experience.</h5>
-			<h6> Connect with us on any of the following social media platforms </h6>
 
-		</footer>
 </html>
+
 <script> 
+//////////////////////////////////////////////////////////////////
+// side navigation
 function openNav() { 
 	document.getElementById("mySidenav").style.width = "250px"; 
 }
@@ -60,6 +394,103 @@ function closeNav() {
 	document.getElementById("mySidenav").style.width = "0px";
 }
 </script>
+<script type="text/javascript">
+function extend(){
 
+	var ch = document.getElementById("expentInventory");
+	// ch.style.display="block";
+	if(ch.style.display==="none"){
+		ch.style.display ="block";
+		document.getElementById("invent").innerHTML ="-"
+	}
+	else{
+		ch.style.display = "none";
+		document.getElementById("invent").innerHTML ="+"
+	}
+}
+// ending side navigation
+////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////
+// slideShow function
+var slidePosition = 0;
+		slide();
+		function slide (){
+			var x;
+			var y= document.getElementsByClassName("slidePic");
+			for(x = 0; x< y.length; x++){
+				y[x].style.display = " none ";			
+			}
+			slidePosition++;
+			if( slidePosition > y.length) {slidePosition = 1}
+			y[slidePosition - 1].style.display = "block";
+			setTimeout(slide, 2000);
+		}
+// end of slideShow
+///////////////////////////////////////////////////////////
+	
+</script>
+
+<script type="text/javascript">
+	
+	var signDiv = document.getElementById("signBg");
+function openSign(){
+		signDiv.style.display = "block";
+	}
+	function closeSign(){
+		signDiv.style.display = "none";
+	}
+	function submitSign(){
+		
+		var b = document.getElementById("signIt");
+		var n = document.getElementById("myText").value;
+		signDiv.style.display = "none";
+		b.style.display ="none";
+		document.getElementById("userName").innerHTML = "My Account | Welcome "+ n;
+	}
+</script>
+
+<script> //The following code is used to make popups of the products
+
+
+var modal = document.getElementById('myModal');
+// var btn = document.getElementById('myBtn');
+// var itemImage2 = document.getElementById('perfume').src;
+
+var span = document.getElementsByClassName("close")[0];
+
+// btn.onclick = function() {
+// 	modal.style.display = "block";
+// }
+span.onclick = function() {
+	modal.style.display = "none";
+}
+// document.getElementById(modalImage).src = itemImage2;
+window.onclick = function(event) {
+	if(event.target == modal) {
+		modal.style.display = "none";
+	}
+};
+</script>
+<script>
+function modalOpen(){
+	modal.style.display = "block"
+} 
+
+// window.onclick = function(event){
+// 	if(event.target == modal) {
+// 		modal.style.display = "none";
+// 	}
+// }
+</script>
+<script>
+function imageChange(x){
+	x.style.height = "500px"
+	x.style.width = "500px"
+}
+function imageBack(x){
+	x.style.height = "10%"
+	x.style.width = "10%"
+}
+</script>
 <!-- utilized some Javascript functions to make the nav bar open and close  -->
-
