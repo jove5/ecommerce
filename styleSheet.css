@@ -326,6 +326,11 @@ body {
 	position:absolute;
 	top:270px;
 }
+#p5{
+	position:absolute;
+	top:270px;
+	left:500px;
+}
 /*itemBox a{
 	text-de*/ /* style for the links in the item block */
 .imagePosition{
