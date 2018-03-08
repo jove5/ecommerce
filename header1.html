@@ -27,7 +27,7 @@
 					<a href="#">About</a>
 					<a href="#">Services</a>
 					<a href="#" onclick="extend()" id="invent" >Inventory +</a>
-					<div id="expentInventory">
+					<div id="expandInventory">
 						<a href="#"><p>Armani</p></a>
 						<a href="#"><p>Gucci</p></a>
 						<a href="#"><p>Prada</p></a>
@@ -189,7 +189,7 @@
 					<p>Polo Black By Ralph Lauren</p>
 				</div>
 				<div class = "itemImage">
-				
+
 					<img src="images/perfume3.jpg" alt = "perfume">
 				</div>
 		</a>
@@ -212,6 +212,21 @@
 				</div>
 			</div>
 				
+				<a href = "#" id = "modalPopup" onclick="modalOpen()">
+			<div class = "itemBlob" id = "p5">
+				<div class = "itemHead">
+					<p>SpiceBomb By Victor & Rolf</p>
+				</div>
+				<div class = "itemImage">
+
+					<img src="images/perfume6.jpg" alt = "perfume">
+				</div>
+		</a>
+				<div class = "itemBottom">
+					<button class = "buy">Buy It Now!</buttaon>
+				</div>
+			
+				</div>
 
 		</div>
 
@@ -356,7 +371,7 @@ function closeNav() {
 </script>
 <script type="text/javascript">
 function extend(){
-	var ch = document.getElementById("expentInventory");
+	var ch = document.getElementById("expandInventory");
 	if(ch.style.display==="none"){
 		ch.style.display ="block";
 		document.getElementById("invent").innerHTML ="Inventory -"
