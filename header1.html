@@ -26,7 +26,7 @@
 					<a href = "javascript:void(0)" class ="closebutton" onclick="closeNav()">&times;</a>
 					<a href="#">About</a>
 					<a href="#">Services</a>
-					<a href="#" onclick="extend()" id="invent" >Inventory +</a>
+					<a href="#">Inventory <samp onclick="extend()" id="invent" style="cursor: pointer"> + </samp></a>
 					<div id="expentInventory">
 						<a href="#"><p>Armani</p></a>
 						<a href="#"><p>Gucci</p></a>
@@ -71,7 +71,7 @@
 		<div class="sideBar">
 			<h2>Filters</h2>
 			<break>
-			<h2>Catergories</h2>
+			<h2><a href="#">Catergories</a></h2>
 			<h3><a href="#">Fragrances ></a></h3>
 			<h3><a href="#">Handbags ></a> </h3>
 			<h3><a href="#">Wine ></a> </h3>
@@ -374,14 +374,16 @@ function closeNav() {
 </script>
 <script type="text/javascript">
 function extend(){
+
 	var ch = document.getElementById("expentInventory");
+	// ch.style.display="block";
 	if(ch.style.display==="none"){
 		ch.style.display ="block";
-		document.getElementById("invent").innerHTML ="Inventory -"
+		document.getElementById("invent").innerHTML ="-"
 	}
 	else{
 		ch.style.display = "none";
-		document.getElementById("invent").innerHTML ="Inventory +"
+		document.getElementById("invent").innerHTML ="+"
 	}
 }
 // ending side navigation

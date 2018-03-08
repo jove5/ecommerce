@@ -240,6 +240,12 @@ body {
 	text-decoration: none;
 	color:white;
 }
+#main a:hover{
+	color:white;
+	font-weight:bold;
+	background-color: #2f3235;
+
+}
 #main span{
 	float:left;
 	position: relative;
@@ -449,6 +455,12 @@ body {
 .sideBar a{
 	text-decoration: none;
 	color:#9D9897;
+}
+.sideBar a:hover{
+	color:black;
+	font-weight:bold;
+	background-color: #a8a6a6s;
+	
 }
 .sideBar h1{
 
