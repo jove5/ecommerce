@@ -317,10 +317,15 @@ body {
 	top:-524px;
 	left:500px;
 }
-/*#p3{
-	position:relative;
-	top:600;
-}*/
+#p3{
+	position:absolute;
+	top:270px;
+	left:250px;
+}
+#p4{
+	position:absolute;
+	top:270px;
+}
 /*itemBox a{
 	text-de*/ /* style for the links in the item block */
 .imagePosition{
