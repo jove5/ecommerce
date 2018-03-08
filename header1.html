@@ -173,15 +173,15 @@
  			<h3>Sale: $59.99</h3>
  			<p id = "filling">Return Policy: Returnable within 30 days for a refund or Jovani credits.</p>
  			<div class = "miniImage">
- 				<img src = "images/perfume7.jpg" alt = "small">
+ 				<img src = "images/perfume7.jpg" onmouseover="imageChange(this)" onmouseout = "imageBack(this)"alt = "small">
  				<!-- <img src = "images/perfume8.jpg" id = "small2" alt = "small2">
  				<img src = "images/perfume9.jpg" id = "small3" alt = "small3"> -->
  			</div>
  			<div class ="small2">
- 				<img src = "images/perfume8.jpg" alt = "small2">
+ 				<img src = "images/perfume8.jpg" onmouseover="imageChange(this)" onmouseout = "imageBack(this)"alt = "small2">
  			</div>
  			<div class = "small3">
- 				<img src = "images/perfume9.jpg" alt = "small3">
+ 				<img src = "images/perfume9.jpg" onmouseover="imageChange(this)" onmouseout = "imageBack(this)"alt = "small3">
  			</div>
  			<form>
  				Quantity:
@@ -446,7 +446,7 @@ function openSign(){
 		var n = document.getElementById("myText").value;
 		signDiv.style.display = "none";
 		b.style.display ="none";
-		document.getElementById("userName").innerHTML = "Welcome "+ n;
+		document.getElementById("userName").innerHTML = "My Account | Welcome "+ n;
 	}
 </script>
 
@@ -483,5 +483,14 @@ function modalOpen(){
 // 	}
 // }
 </script>
-
+<script>
+function imageChange(x){
+	x.style.height = "500px"
+	x.style.width = "500px"
+}
+function imageBack(x){
+	x.style.height = "10%"
+	x.style.width = "10%"
+}
+</script>
 <!-- utilized some Javascript functions to make the nav bar open and close  -->
